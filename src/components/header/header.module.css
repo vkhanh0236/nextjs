@@ -1,4 +1,8 @@
 .search{
-    background-color: aqua;
-    width: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    height: 40px;
+}
+.headerP{
+    height: 80px;
 }
