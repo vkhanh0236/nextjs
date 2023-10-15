@@ -1,0 +1,23 @@
+.search{
+    border: 1px solid #000;
+    border-radius: 10px;
+    height: 40px;
+}
+.headerP{
+    height: 80px;
+}
+
+.navbar-right{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.navbar-left{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+}

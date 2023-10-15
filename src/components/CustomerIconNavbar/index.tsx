@@ -9,8 +9,8 @@ interface IconNav {
 
 export default function IconNavbar(props: IconNav) {
     return (
-        <div className={`${style.ico_home}`}>
-            <button className="btn " type="submit">
+        <div className={`${style['ico-home']}`}>
+            <button className="btn " type="submit" style={{ padding: '0.375rem' }}>
                 <img src={props.img} alt="Logo" className="d-inline-block align-text-top" style={props.style} />
             </button>
         </div>

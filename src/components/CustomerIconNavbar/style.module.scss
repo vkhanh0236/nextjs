@@ -1,5 +1,9 @@
 
-.ico_home{
-    background-color: #D9D9D9;
+.ico-home {
+    background-color: #fff;
     border-radius: 50%;
+    &:hover {
+        background-color: #D9D9D9;
+    }
 }
+ 
