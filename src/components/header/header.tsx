@@ -1,9 +1,10 @@
 'use client'
 import x from '@/components/header/header.module.scss'
+// import './header.module.scss'
 import IconNavbar from '../CustomerIconNavbar'
 export default function Header() {
     return (
-        <nav className={`navbar ${x.headerP}`} style={{ border: 'solid 1px black', padding: '0px 20px' }}>
+        <nav className={`navbar ${x.headerP} container-xxl`} style={{ border: 'solid 1px black', padding: '0px 20px' }}>
             <div className={`${x['navbar-left']}`}>
                 <div>
                     <a className="navbar-brand" href="/"><img src="/img/logo_2.svg" alt="Logo" className="d-inline-block align-text-top" /></a>
@@ -23,8 +24,8 @@ export default function Header() {
 
                 <button className='account' style={{ backgroundColor: '#fff', border: 'none' }}>
                     <div style={{ display: 'flex' }}>
-                        <img src="/img/avatar-default.jpg" alt="avatar" sizes='auto' style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
-                        <p style={{ margin: 'auto', paddingLeft: '10px' }}>232333333333333</p>
+                        <img className='navbar__avatar' src="/img/avatar-default.jpg" alt="avatar" sizes='auto' style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+                        <p className='navbar__userName' style={{ maxWidth: '9.375rem', margin: 'auto', paddingLeft: '10px' }}>232333333333333</p>
                     </div>
 
                 </button>
