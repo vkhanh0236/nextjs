@@ -1,95 +1,57 @@
 import Image from 'next/image'
-import styles from './page.module.css'
-
+import styles from './page.module.scss'
+import Link from 'next/link';
+import Button from '../components/CustomerButton'
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <main className={`${styles.main} container-xxl`}>
+      <div >
+        <figure>
+          <div className={`${styles.media_container}`}>
+            <img className={styles.img_Banner} src="/img/imgBe/banner.png" alt="banner" />
+            <img className={styles.img_Banner} src="/img/imgBe/banner.png" alt="banner" />
+            <img className={styles.img_Banner} src="/img/imgBe/banner.png" alt="banner" />
+          </div>
+
+          <figcaption>
+            <div className='text-center'>
+              <h4 className='text-dark' >Louis Vuitton X Nike Air Force 1</h4>
+              <p className='text-body-tertiary'>The Louis Vuitton and Nike “Air Force 1″ by Virgil Abloh</p>
+              <div>
+                <Button class='dark' text='shop Now' />
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+
+      </div>
+      <div className='px-5'>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <p className='text-capitalize'>
+
+            Dont' miss
+          </p>
+        </div>
+        <div className='row '>
+          <div className="card col text-bg-white border-0 w-50 ">
+            <img src="./img/imgBe/banner_overlay.png" className="card-img rounded-0" alt="..." />
+            <div className="card-img-overlay align-items-center" style={{ top: 'unset', left: 'unset', right: 'unset' }}>
+              <h5 className="card-title text-white">Nike Air Force 1 Shadow</h5>
+              <Button class='light' text='shop Now'></Button>
+            </div>
+          </div>
+          <div className="card col text-bg-white border-0 w-50 ">
+            <img src="./img/imgBe/banner_overlay.png" className="card-img rounded-0" alt="..." />
+            <div className="card-img-overlay">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p className="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <div></div>
+      <div></div>
     </main>
   )
 }
