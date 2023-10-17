@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link"
-type Class = "light" | "dark" | 'boder'
+type Class = "light" | "dark" | 'border'
 export default function Button(props: {
     class: Class,
     text: string

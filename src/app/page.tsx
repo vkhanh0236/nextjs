@@ -1,8 +1,14 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.scss'
 import Link from 'next/link';
 import Button from '../components/CustomerButton'
+import { useEffect } from "react";
 export default function Home() {
+
+  useEffect(() => {
+    typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null
+  }, []) // import bootstrap
   return (
     <main className={`${styles.main} container-xxl`}>
       <div >
@@ -15,7 +21,7 @@ export default function Home() {
 
           <figcaption>
             <div className='text-center'>
-              <h4 className='text-dark' >Louis Vuitton X Nike Air Force 1</h4>
+              <h4 className='text-dark pt-2' >Louis Vuitton X Nike Air Force 1</h4>
               <p className='text-body-tertiary'>The Louis Vuitton and Nike “Air Force 1″ by Virgil Abloh</p>
               <div>
                 <Button class='dark' text='shop Now' />
@@ -25,7 +31,7 @@ export default function Home() {
         </figure>
 
       </div>
-      <div className='px-5'>
+      <div className='px-5 pb-5'>
         <div>
           <p className='text-capitalize'>
 
@@ -33,9 +39,9 @@ export default function Home() {
           </p>
         </div>
         <div className='row '>
-          <div className="card col text-bg-white border-0 w-50 ">
+          <div className="card col text-bg-white border-0 w-50 align-items-end">
             <img src="./img/imgBe/banner_overlay.png" className="card-img rounded-0" alt="..." />
-            <div className="card-img-overlay align-items-center" style={{ top: 'unset', left: 'unset', right: 'unset' }}>
+            <div className="card-img-overlay text-center" style={{ top: 'unset', left: 'unset', right: 'unset' }}>
               <h5 className="card-title text-white">Nike Air Force 1 Shadow</h5>
               <Button class='light' text='shop Now'></Button>
             </div>
@@ -50,8 +56,67 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div></div>
-      <div></div>
+      <div className='px-5 pb-5'>
+        <div>
+          <h4 className='text-capitalize'>
+            trending
+          </h4>
+        </div>
+
+        <div>
+          <div>
+            <Link href="" >
+
+              <img className='w-100' src="./img/imgBe/banner2.png" alt="banner" />
+            </Link>
+          </div>
+          <div>
+            <div className='text-center'>
+              <Link href="">
+                <h4 className='text-dark pt-2' >Louis Vuitton X Nike Air Force 1</h4>
+                <p className='text-body-tertiary'>The Louis Vuitton and Nike “Air Force 1″ by Virgil Abloh</p>
+
+              </Link>
+              <div>
+                <Button class='dark' text='shop Now' />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div className='px-5 pb-5'>
+        <div>
+          <h4>
+            More NIKE
+          </h4>
+        </div>
+        <div className='prod_home'>
+          <div className='d-flex justify-content-between w-100'>
+            <div className={`card  text-bg-white border-0  align-items-end ${styles.product_home}`} >
+              <img src="./img/imgBe/product_home.png" className="card-img rounded-0" alt="..." />
+              <div className="card-img-overlay " >
+                <Button class='border' text='shop Now'></Button>
+              </div>
+            </div>
+            <div className={`card  text-bg-white border-0  align-items-end ${styles.product_home}`}>
+              <img src="./img/imgBe/product_home.png" className="card-img rounded-0" alt="..." />
+              <div className="card-img-overlay text-center" style={{ top: 'unset', left: 'unset', right: 'unset' }}>
+                <h5 className="card-title text-white">Nike Air Force 1 Shadow</h5>
+                <Button class='light' text='shop Now'></Button>
+              </div>
+            </div>
+            <div className={`card  text-bg-white border-0  align-items-end ${styles.product_home}`} >
+              <img src="./img/imgBe/product_home.png" className="card-img rounded-0" alt="..." />
+              <div className="card-img-overlay text-center" style={{ top: 'unset', left: 'unset', right: 'unset' }}>
+                <h5 className="card-title text-white">Nike Air Force 1 Shadow</h5>
+                <Button class='light' text='shop Now'></Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
