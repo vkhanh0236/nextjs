@@ -24,9 +24,9 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={`${x['navbar-right']}`}>
-                    <IconNavbar img='/img/home.svg' img_h='/img/home_h.svg' />
-                    <IconNavbar img='/img/shop.svg' />
-                    <IconNavbar img='/img/news.svg' />
+                    <IconNavbar img='/img/home.svg' img_h='/img/home_h.svg' link='/' />
+                    <IconNavbar img='/img/shop.svg' img_h='/img/shop_h.svg' link='/shop' />
+                    <IconNavbar img='/img/news.svg' img_h='/img/news_h.svg' />
                     <IconNavbar img='/img/shoppingBag.svg' />
 
                     <button className='account' style={{ backgroundColor: '#fff', border: 'none' }}>
